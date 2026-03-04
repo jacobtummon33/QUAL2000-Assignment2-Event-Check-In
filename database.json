@@ -1,4 +1,34 @@
 {
-  "events": [],
-  "attendees": []
+  "events": [
+    {
+      "id": "CONF1",
+      "name": "First Official Conference",
+      "date": "2026-01-01"
+    },
+    {
+      "id": "TEST1",
+      "name": "Sample Event 01",
+      "date": "2026-01-01"
+    }
+  ],
+  "attendees": [
+    {
+      "eventId": "CONF1",
+      "name": "Greg",
+      "email": "greg@gmail.com",
+      "checkedIn": true
+    },
+    {
+      "eventId": "TEST1",
+      "name": "Greg",
+      "email": "greg@example.com",
+      "checkedIn": true
+    },
+    {
+      "eventId": "TEST1",
+      "name": "Jim",
+      "email": "jim@yup.com",
+      "checkedIn": false
+    }
+  ]
 }

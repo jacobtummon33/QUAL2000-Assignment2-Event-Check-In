@@ -1,0 +1,32 @@
+# workflow name
+name: Node.js CI
+
+# when to run workflow
+on:
+  push:
+    branches: [main] # push to main
+  pull_request:
+    branches: [main] # pull requests to main branch
+
+#jobs the workflow does
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # step 1, checkout repo
+      - uses: actions/checkout@v4
+
+      #step 2, setup node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node:version: "22"
+
+      #step 3, install the repos dependencies from package.json
+      - name: Install dependencies
+        run: npm install
+
+      #step 4, run unit and integration tests
+      - name: Run Tests
+        run: node --test
